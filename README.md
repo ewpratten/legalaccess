@@ -6,7 +6,22 @@ This library is free to use and modify. In my experience, the reflection calls a
 
 ## Installation
 
-*WIP*
+
+**Step 1.** Add the RetryLife maven server to your `build.gradle` file:
+
+```groovy
+repositories {
+    maven { url 'https://maven.retrylife.ca' }
+}
+```
+
+**Step 1.** Add this library as a dependency:
+
+```groovy
+dependencies {
+    implementation 'ca.retrylife:legalaccess:v1.0.0'
+}
+```
 
 ## Usage
 
