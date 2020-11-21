@@ -32,7 +32,7 @@ public class MethodAccessor<T> {
         this.privateMethod.setAccessible(true);
 
         // Error if there is a type mismatch
-        if (!this.privateMethod.getReturnType().equals(classOfT)) {
+        if (!ClassTypeComparisonUtil.matches(this.privateMethod.getReturnType(), classOfT)) {
             throw new RuntimeException(String.format("Type mismatch between %s and return type of method %s (%s)",
                     classOfT.getName(), methodName, this.privateMethod.getReturnType().getName()));
         }
@@ -58,7 +58,7 @@ public class MethodAccessor<T> {
 
         // Ensure arguments all match
         for (int i = 0; i < args.length; i++) {
-            if (!args[i].getClass().equals(this.argumentTypes[i])) {
+            if (!ClassTypeComparisonUtil.matches(args[i].getClass(), this.argumentTypes[i])) {
                 throw new RuntimeException(
                         String.format("Type mismatch between argument number %d (%s) and expected type: %s", i,
                                 args[i].getClass().getName(), this.argumentTypes[i].getName()));

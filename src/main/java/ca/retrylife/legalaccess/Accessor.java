@@ -27,7 +27,7 @@ public class Accessor<T> {
         this.privateField.setAccessible(true);
 
         // Error if there is a type mismatch
-        if (!this.privateField.getType().equals(classOfT)) {
+        if (!ClassTypeComparisonUtil.matches(this.privateField.getType(), classOfT)) {
             throw new RuntimeException(String.format("Type mismatch between generic %s and type of field %s (%s)",
                     classOfT.getName(), fieldName, privateField.getType().getName()));
         }
