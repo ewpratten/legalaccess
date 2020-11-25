@@ -19,7 +19,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'ca.retrylife:legalaccess:v1.0.0'
+    implementation 'ca.retrylife:legalaccess:v1.+'
 }
 ```
 

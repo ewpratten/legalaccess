@@ -1,4 +1,5 @@
 name: Deploy docs
+# NOTE: requires https://retrylife.ca/r/gradledefaults
 
 on:
   push:
