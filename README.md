@@ -1,4 +1,6 @@
-# LegalAccess
+![# LegalAccess](./LegalAccess.png)
+
+---
 
 LegalAccess is a small Java library that wraps some commonly used reflection code for fetching / modifying private variables and methods. This library is adapted from some internal unit test code I wrote for [frc5024/lib5k](https://github.com/frc5024/lib5k) which had to make direct calls into a hidden hardware access layer. I now use this library mainly for writing Minecraft mods where I am calling into other mods' code when mod authors do not provide a public API.
 
