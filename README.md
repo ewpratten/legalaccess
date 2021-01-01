@@ -22,8 +22,8 @@ repositories {
 ```groovy
 dependencies {
     implementation 'ca.retrylife:legalaccess:v1.+'
-    implementation 'ca.retrylife:legalaccess-sources:v1.+'
-    implementation 'ca.retrylife:legalaccess-javadoc:v1.+'
+    implementation 'ca.retrylife:legalaccess:v1.+:sources'
+    implementation 'ca.retrylife:legalaccess:v1.+:javadoc'
 }
 ```
 
