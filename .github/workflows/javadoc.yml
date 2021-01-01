@@ -25,7 +25,7 @@ jobs:
 
       - uses: eskatos/gradle-command-action@v1
         with:
-          arguments: clean betterJavadocs
+          arguments: clean betterJavadoc
 
       - name: Check GitHub Pages status
         uses: crazy-max/ghaction-github-status@v1
