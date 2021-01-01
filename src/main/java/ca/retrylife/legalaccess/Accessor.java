@@ -34,6 +34,27 @@ public class Accessor<T> {
     }
 
     /**
+     * Create an Accessor for a static field
+     * 
+     * @param fieldName Name of the private static field
+     * @param ownerClass Class that wraps the static field
+     * @param classOfT The class of generic type T
+     * @throws NoSuchFieldException
+     * @throws SecurityException
+     */
+    public Accessor(String fieldName, Class<?> ownerClass, Class<T> classOfT) throws NoSuchFieldException, SecurityException {
+        this.owner = null;
+        this.privateField = ownerClass.getDeclaredField(fieldName);
+        this.privateField.setAccessible(true);
+
+        // Error if there is a type mismatch
+        if (!ClassTypeComparisonUtil.matches(this.privateField.getType(), classOfT)) {
+            throw new RuntimeException(String.format("Type mismatch between generic %s and type of field %s (%s)",
+                    classOfT.getName(), fieldName, privateField.getType().getName()));
+        }
+    }
+
+    /**
      * Set the variable value
      * 
      * @param value Value
