@@ -1,5 +1,4 @@
 name: Deploy docs
-# NOTE: requires https://retrylife.ca/r/gradledefaults
 
 on:
   push:
@@ -18,7 +17,7 @@ jobs:
 
       - uses: eskatos/gradle-command-action@v1
         with:
-          arguments: clean sensibleJavadoc
+          arguments: clean betterJavadocs
 
       - name: Check GitHub Pages status
         uses: crazy-max/ghaction-github-status@v1
