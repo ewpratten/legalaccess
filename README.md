@@ -13,7 +13,7 @@ This library is free to use and modify. In my experience, the reflection calls a
 
 ```groovy
 repositories {
-    maven { url 'https://maven.retrylife.ca' }
+    maven { url 'https://gpr.retrylife.ca/ewpratten/legalaccess' }
 }
 ```
 
@@ -21,9 +21,9 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'ca.retrylife:legalaccess:v1.+'
-    implementation 'ca.retrylife:legalaccess:v1.+:sources'
-    implementation 'ca.retrylife:legalaccess:v1.+:javadoc'
+    implementation 'ca.retrylife:legalaccess:1.+'
+    implementation 'ca.retrylife:legalaccess:1.+:sources'
+    implementation 'ca.retrylife:legalaccess:1.+:javadoc'
 }
 ```
 
