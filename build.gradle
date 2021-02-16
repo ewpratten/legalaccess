@@ -2,8 +2,6 @@ plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
     id "java"
-
-    // id "ca.retrylife.gradle.sensibledefaults" version "1.0.4"
 }
 
 apply from: "gradle_scripts/sensible.gradle"
