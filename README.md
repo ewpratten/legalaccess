@@ -1,6 +1,8 @@
 ![# LegalAccess](./LegalAccess.png)
 
----
+<hr>
+
+[![Documentation](https://img.shields.io/badge/-documentation-blue)](https://ewpratten.retrylife.ca/legalaccess) ![Build library](https://github.com/Ewpratten/legalaccess/workflows/Build%20library/badge.svg)
 
 LegalAccess is a small Java library that wraps some commonly used reflection code for fetching / modifying private variables and methods. This library is adapted from some internal unit test code I wrote for [frc5024/lib5k](https://github.com/frc5024/lib5k) which had to make direct calls into a hidden hardware access layer. I now use this library mainly for writing Minecraft mods where I am calling into other mods' code when mod authors do not provide a public API.
 
@@ -13,11 +15,14 @@ This library is free to use and modify. In my experience, the reflection calls a
 
 ```groovy
 repositories {
-    maven { url 'https://gpr.retrylife.ca/ewpratten/legalaccess' }
+    maven { 
+        name 'retrylife-release'
+        url 'https://release.maven.retrylife.ca/' 
+    }
 }
 ```
 
-**Step 1.** Add this library as a dependency:
+**Step 2.** Add this library as a dependency:
 
 ```groovy
 dependencies {
